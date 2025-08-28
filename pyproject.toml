@@ -23,3 +23,7 @@ Issues = "https://github.com/imogen-deeptech/mira-tools/issues"
 dev = [
     "pytest",
 ]
+
+[tool.setuptools.packages.find]
+include = ["mira*"]
+exclude = ["tests*"]

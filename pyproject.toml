@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mira-tools"
+version = "0.0.1"
+description = "Common abstractions for Mira solution"
+authors = [{ name = "Gabriel Lima", email = "gabriel.lima@imogen.com.br" }]
+license = "MIT"
+readme = "README.md"
+keywords = ["example", "sync", "messages"]
+dependencies = [
+    "easter"
+]
+
+[project.urls]
+Documentation = "https://github.com/imogen-deeptech/mira-tools#readme"
+Issues = "https://github.com/imogen-deeptech/mira-tools/issues"
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]

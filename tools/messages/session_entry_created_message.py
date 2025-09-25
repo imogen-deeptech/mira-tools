@@ -1,8 +1,9 @@
 from easter import Message
+from tools.models.unit_record import UnitRecord
 
 
 class SessionEntryCreatedMessage(Message):
-    def __init__(self, code: str, target: str, units: list[str]):
+    def __init__(self, code: str, target: str, units: list[UnitRecord]):
         self.code = code
         self.target = target
         self.units = units
@@ -21,11 +22,11 @@ class SessionEntryCreatedMessage(Message):
             self.target = target
             return self
 
-        def with_units(self, units: list[str]):
+        def with_units(self, units: list[UnitRecord]):
             self.units = units
             return self
 
-        def add_unit(self, unit: str):
+        def add_unit(self, unit: UnitRecord):
             self.units.append(unit)
             return self
 
